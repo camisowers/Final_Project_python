@@ -9,5 +9,5 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
   
 	6/19 - Lessons: "Hello World", "Variables and Types", "Lists" |
 	6/20 - Lessons: "Basic Operators", "String Formatting", "Basic String Operators" 
-	6/22 - Lessons: "Loops", "Functions", "Classes and Objects"
+	6/22 - Lessons: "Conditions", "Loops", "Functions", "Classes and Objects"
 	6/23 - Lessons: "Dictionaries", "Modules and Packages"
