@@ -1,4 +1,4 @@
-import _random          #random library
+import random          #random library
 
 class card:
     suit = " "
@@ -6,13 +6,12 @@ class card:
         
     #prints out rank and suit of card
     def print_card(self):                   
-        print("%d of %s")
+        print("%d of %s", (rank,suit)
 
     #overload < operator
-    def __lt__(self,other):               
-        return (self.rank < other.rank)
-    
-    
+ #   def __lt__(self,other):               
+ #       return (self.rank < other.rank)
+      
     def set_values(self):
         r1 = random.randrange(1,13)       #chooses random number correlating to type of card in deck
         set_rank = {                 #have to use a dictionary list instead of switch function
