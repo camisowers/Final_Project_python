@@ -11,5 +11,5 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 	6/20 - Lessons: "Basic Operators", "String Formatting", "Basic String Operators" 
 	6/22 - Lessons: "Conditions", "Loops", "Functions", "Classes and Objects"
 	6/23 - Lessons: "Dictionaries", "Modules and Packages"
-	6/27 - Learn about overloading operators (https://www.youtube.com/watch?v=ahX28le3cZg)
+	6/27 - Overloading Operators (https://www.youtube.com/watch?v=ahX28le3cZg), Random Library (https://docs.python.org/3/library/random.html#functions-for-integers), Switch (https://www.pydanny.com/why-doesnt-python-have-switch-case.html)
 	
