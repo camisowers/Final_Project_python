@@ -14,4 +14,5 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 	6/27 - Overloading Operators (https://www.youtube.com/watch?v=ahX28le3cZg), 
 		Random Library (https://docs.python.org/3/library/random.html#functions-for-integers), 
 		Switch (https://www.pydanny.com/why-doesnt-python-have-switch-case.html)
-	
+	7/2 - Fixing Error (https://stackoverflow.com/questions/12845389/shufler-takes-exactly-1-positional-argument-2-given)
+		Class Initialization (https://docs.python.org/2/tutorial/classes.html)
