@@ -8,9 +8,11 @@ import random          #random library
 suits spades, clubs, hearts, and diamonds.
 '''
 class card:
-    suit = " "
-    rank = 0
-        
+
+    def __init__(self, suit = " ", rank = 0):           #initializes
+        self.suit = suit
+        self.rank = rank
+
     #prints out rank and suit of card
     def print_card(self):                   
         print("%d of %s" % (self.rank, self.suit))          #string formatting different than cout
@@ -50,17 +52,18 @@ class card:
 ''' The class hand stores the player's cards and prints it out.
 '''
 class hand:
-    player_hand = []           #use list instead of vector
-    total = 0                  #(int) total amount in hand 
+    def __init__(self, player_hand = [], total = 0):           #initializes
+        self.player_hand = player_hand                      #use list instead of vector
+        self.total = total                                  #(int) total amount in hand 
     
     #adds a new card to the player's hand and keeps track of the total value
-    def add_card(new_card):
-        player_hand.append(new_card)
-        total = total + new_card.rank
+    def add_card(self, card):
+        self.player_hand.append(card)
+        self.total = self.total + card.rank
     
     #prints all the cards in the hand
     def print_hand(self):
-        for x in player_hand:           #for loop that iterators through the list
+        for x in self.player_hand:           #for loop that iterates through the list
             x.print_card()
 
 
@@ -68,12 +71,16 @@ class hand:
 def main():
     card1 = card()          
     card1.set_values()
+    card1.print_card()
     card2 = card()
     card2.set_values()
+    card2.print_card()
 
     hand1 = hand()
     hand1.add_card(card1)
     hand1.add_card(card2)
     hand1.print_hand()
+
+    print(hand1.total)
 
 main()
