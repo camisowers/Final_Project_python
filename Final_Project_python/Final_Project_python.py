@@ -110,8 +110,16 @@ def run_game():
     h1.print_hand()
     print("Total = %d" % h1.total)
 
+    card1 = card()              
+    card1.set_values()
+    h2.add_card(card1)
+    card2 = card()
+    card2.set_values()
+    h2.add_card(card2)             #creates dealer's hand
 
-    #print("Dealer:")
+    print("Dealer:")
+    card1.print_card()
+
     
 
 
