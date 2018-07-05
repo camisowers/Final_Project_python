@@ -66,10 +66,42 @@ class hand:
         for x in self.player_hand:           #for loop that iterates through the list
             x.print_card()
 
+''' The player hand stores the player's money.
+'''
+class player: 
+    def __init__(self, money = 0):          #initializes
+        self.money = money
+
+    #set buy in amount
+    def buy_in(self, start_money):
+        self.money = start_money
+
+    #adds wins to player's money
+    def win(self, bet):
+        self.money = self.money + bet
+    
+    #subtracts losses to player's money
+    def lose(self, bet):
+        sefl.money = self.money - bet
+
+    #gives player double their bet if they get blackjack
+    def blackjack(self, bet):
+        self.money = self.money + 2*bet
+
+# game function
+def run_game():
+    p1 = player()
+    amount = input("Enter your buy in amount: ")
+    money = int(amount)
+    p1.buy_in(money)
+
 
 # main function
 def main():
-    card1 = card()          
+    run_game()
+
+    
+'''    card1 = card()          
     card1.set_values()
     card1.print_card()
     card2 = card()
@@ -81,6 +113,6 @@ def main():
     hand1.add_card(card2)
     hand1.print_hand()
 
-    print(hand1.total)
+    print(hand1.total)  '''
 
 main()
