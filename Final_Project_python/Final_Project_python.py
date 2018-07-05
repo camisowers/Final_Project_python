@@ -90,10 +90,29 @@ class player:
 
 # game function
 def run_game():
-    p1 = player()
-    amount = input("Enter your buy in amount: ")
-    money = int(amount)
+    p1 = player()           #player one
+    amount1 = input("Enter your buy in amount: ")
+    money = int(amount1)
     p1.buy_in(money)
+
+    h1 = hand()             #player hand
+    h2 = hand()             #dealer hand
+
+    amount2 = input("How much would you like to bet? ")
+    bet = int(amount2)      #sets player's bet 
+
+    for x in range(2):          #creates player's hand
+        card1 = card()
+        card1.set_values()
+        h1.add_card(card1)
+
+    print("Your cards:")
+    h1.print_hand()
+    print("Total = %d" % h1.total)
+
+
+    #print("Dealer:")
+    
 
 
 # main function
