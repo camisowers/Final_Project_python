@@ -82,7 +82,7 @@ class player:
     
     #subtracts losses to player's money
     def lose(self, bet):
-        sefl.money = self.money - bet
+        self.money = self.money - bet
 
     #gives player double their bet if they get blackjack
     def blackjack(self, bet):
@@ -119,6 +119,24 @@ def run_game():
 
     print("Dealer:")
     card1.print_card()
+    
+    move = "hit"                #assumption unless changed by user
+    while (move == "hit"):
+        move = input("Would you like to hit or stay? ")
+        if (move == "stay"):
+            print("Your total is %d" % h1.total)
+            break
+        new_card = card()
+        new_card.set_values()
+        h1.add_card(new_card)
+        new_card.print_card()
+        print("Total = %d" % h1.total)
+        if (h1.total > 21):
+            print("You bust!")
+            p1.lose(bet)
+            break
+
+    
 
     
 
