@@ -17,4 +17,5 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 	7/2 - Fixing Error (https://stackoverflow.com/questions/12845389/shufler-takes-exactly-1-positional-argument-2-given)
 		Class Initialization (https://docs.python.org/2/tutorial/classes.html)
 	7/5 - Reading Console Input (https://stackoverflow.com/questions/5404068/how-to-read-keyboard-input)
-		Fixing Parameter Error (https://stackoverflow.com/questions/23176597/python-object-takes-no-parameters-error)				Classes (https://docs.python.org/3/tutorial/classes.html)
+		Fixing Parameter Error (https://stackoverflow.com/questions/23176597/python-object-takes-no-parameters-error)	
+		Classes (https://docs.python.org/3/tutorial/classes.html)
