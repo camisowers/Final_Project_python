@@ -4,6 +4,7 @@
 
 import random          #random library
 
+
 ''' The class card randomly generats cards 2-10, Jack, Queen, King, Ace with
 suits spades, clubs, hearts, and diamonds.
 '''
@@ -88,12 +89,15 @@ class player:
     def blackjack(self, bet):
         self.money = self.money + 2*bet
 
+#global variables
+p1 = player()
+
+amount1 = input("Enter your buy in amount: ")
+money = int(amount1)
+p1.buy_in(money)
+
 # game function
-def run_game():
-    p1 = player()           #player one
-    amount1 = input("Enter your buy in amount: ")
-    money = int(amount1)
-    p1.buy_in(money)
+def run_game():   
 
     h1 = hand("player")
     h2 = hand("dealer")                                     
@@ -128,36 +132,59 @@ def run_game():
         new_card.set_values()
         h1.add_card(new_card)
         new_card.print_card()
-        print("Total = %d" % h1.total)
+        print("Your total = %d" % h1.total)
         if (h1.total > 21):
-            print("You bust!")
+            print("You bust! Lose $%d." % bet)
             p1.lose(bet)
             break
 
     print("Dealer:")
     h2.print_hand()
-    
+    while (h2.total < 17):
+        new_card = card()
+        new_card.set_values()
+        h2.add_card(new_card)
+        new_card.print_card()
 
-    
+    if (h2.total > 21):
+        print("Dealer bust!")
+    else:
+        print("Dealer total = %d" % h2.total)
 
+    if (h1.total == h2.total and h1.total <= 21):
+        print("Push! You keep your bet.")
+    elif (h1.total > h2.total and h1.total <= 21):
+        print("You win %d!" % bet)
+        p1.win(bet)
+    elif (h2.total > 21 and h1.total <= 21):
+        print("You win $%d!" % bet)
+        p1.win(bet)
+    elif (h1.total < h2.total and h2.total <= 21):
+        print("You lose $%d!" % bet)
+        p1.lose(bet)
+
+    print("You have $%d." % p1.money)
+    if (p1.money > 0):
+        status = input("Would you like to play again? ")
+        if (status == "yes"):
+            return True
+        else:
+            return False
+    else:
+        print("          You have no money left. Thanks for playing!")
+        return False
+
+   
 
 # main function
 def main():
-    run_game()
-
+    status = True
+    while (status == True):
+        status = run_game()
     
-'''    card1 = card()          
-    card1.set_values()
-    card1.print_card()
-    card2 = card()
-    card2.set_values()
-    card2.print_card()
+    if (p1.money > 0):
+        print("          Congratulations! You have $%d." %p1.money)
 
-    hand1 = hand()
-    hand1.add_card(card1)
-    hand1.add_card(card2)
-    hand1.print_hand()
 
-    print(hand1.total)  '''
 
 main()
