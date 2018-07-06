@@ -9,13 +9,12 @@ suits spades, clubs, hearts, and diamonds.
 '''
 class card:
 
-    def __init__(self, suit = " ", rank = 0):           #initializes
-        self.suit = suit
-        self.rank = rank
+    suit = " "
+    rank = 0
 
     #prints out rank and suit of card
     def print_card(self):                   
-        print("%d of %s" % (self.rank, self.suit))          #string formatting different than cout
+        print("          %d of %s" % (self.rank, self.suit))          #string formatting different than cout
 
     #overload < operator
     def __lt__(self,other):               
@@ -52,9 +51,11 @@ class card:
 ''' The class hand stores the player's cards and prints it out.
 '''
 class hand:
-    def __init__(self, player_hand = [], total = 0):           #initializes
-        self.player_hand = player_hand                      #use list instead of vector
-        self.total = total                                  #(int) total amount in hand 
+
+    def __init__(self, name):
+        self.name = name
+        self.player_hand = []
+        self.total = 0
     
     #adds a new card to the player's hand and keeps track of the total value
     def add_card(self, card):
@@ -69,8 +70,7 @@ class hand:
 ''' The player hand stores the player's money.
 '''
 class player: 
-    def __init__(self, money = 0):          #initializes
-        self.money = money
+    money = 0
 
     #set buy in amount
     def buy_in(self, start_money):
@@ -95,8 +95,8 @@ def run_game():
     money = int(amount1)
     p1.buy_in(money)
 
-    h1 = hand()             #player hand
-    h2 = hand()             #dealer hand
+    h1 = hand("player")
+    h2 = hand("dealer")                                     
 
     amount2 = input("How much would you like to bet? ")
     bet = int(amount2)      #sets player's bet 
@@ -110,15 +110,13 @@ def run_game():
     h1.print_hand()
     print("Total = %d" % h1.total)
 
-    card1 = card()              
-    card1.set_values()
-    h2.add_card(card1)
-    card2 = card()
-    card2.set_values()
-    h2.add_card(card2)             #creates dealer's hand
-
     print("Dealer:")
-    card1.print_card()
+    for x in range(2):           #creates dealer's hand
+       card2 = card()
+       card2.set_values()
+       h2.add_card(card2) 
+       if (x ==0):
+           card2.print_card()            
     
     move = "hit"                #assumption unless changed by user
     while (move == "hit"):
@@ -136,6 +134,8 @@ def run_game():
             p1.lose(bet)
             break
 
+    print("Dealer:")
+    h2.print_hand()
     
 
     
