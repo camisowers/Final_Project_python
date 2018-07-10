@@ -19,3 +19,7 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 	7/5 - Reading Console Input (https://stackoverflow.com/questions/5404068/how-to-read-keyboard-input)
 		Fixing Parameter Error (https://stackoverflow.com/questions/23176597/python-object-takes-no-parameters-error)	
 		Classes (https://docs.python.org/3/tutorial/classes.html)
+	7/10 - Some class related topics:
+		Memory Management (https://docs.python.org/2/c-api/memory.html)
+		Iterators (https://www.datacamp.com/community/tutorials/python-iterator-tutorial)
+		Inheritance (https://www.python-course.eu/python3_inheritance.php)
