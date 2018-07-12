@@ -23,3 +23,5 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 		Memory Management (https://docs.python.org/2/c-api/memory.html)
 		Iterators (https://www.datacamp.com/community/tutorials/python-iterator-tutorial)
 		Inheritance (https://www.python-course.eu/python3_inheritance.php)
+	7/11 - Smart Pointers (http://pybind11.readthedocs.io/en/stable/advanced/smart_ptrs.html)
+		Templates (https://stackoverflow.com/questions/6725868/generics-templates-in-python)
