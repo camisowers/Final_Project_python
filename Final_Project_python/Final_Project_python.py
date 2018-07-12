@@ -146,45 +146,45 @@ def run_game():
         h2.add_card(new_card)
         new_card.print_card()
 
-    if (h2.total > 21):
+    if (h2.total > 21):                                         # dealer bust
         print("Dealer bust!")
     else:
-        print("Dealer total = %d" % h2.total)
+        print("Dealer total = %d" % h2.total)                   # prints out dealer's total
 
-    if (h1.total == h2.total and h1.total <= 21):
+    if (h1.total == h2.total and h1.total <= 21):               # dealer and player have same total
         print("Push! You keep your bet.")
-    elif (h1.total > h2.total and h1.total <= 21):
+    elif (h1.total > h2.total and h1.total <= 21):              # player wins
         print("You win %d!" % bet)
         p1.win(bet)
-    elif (h2.total > 21 and h1.total <= 21):
+    elif (h2.total > 21 and h1.total <= 21):                    # dealer bust, player win
         print("You win $%d!" % bet)
         p1.win(bet)
-    elif (h1.total < h2.total and h2.total <= 21):
+    elif (h1.total < h2.total and h2.total <= 21):              # dealer total higher, dealer win
         print("You lose $%d!" % bet)
         p1.lose(bet)
 
-    print("You have $%d." % p1.money)
+    print("You have $%d." % p1.money)                           # prints out player's new money amount
     if (p1.money > 0):
-        status = input("Would you like to play again? ")
+        status = input("Would you like to play again? ")        # updates player's status to determine new game or stop
         if (status == "yes"):
             return True
         else:
             return False
     else:
-        print("          You have no money left. Thanks for playing!")
-        return False
+        print("          You have no money left. Thanks for playing!")      # ends game when player is out of money
+        return False    
 
    
 
 # main function
 def main():
     status = True
-    while (status == True):
+    while (status == True):                 # true means player still has money and has chosen to continue playing
         status = run_game()
     
-    if (p1.money > 0):
+    if (p1.money > 0):                      # when player is done, it tells them how much money they are ending with
         print("          Congratulations! You have $%d." %p1.money)
 
 
 
-main()
+main()          #runs the whole program
