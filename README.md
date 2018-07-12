@@ -25,3 +25,7 @@ Since I have no prior knowledge about Python, I am choosing to learn it through 
 		Inheritance (https://www.python-course.eu/python3_inheritance.php)
 	7/11 - Smart Pointers (http://pybind11.readthedocs.io/en/stable/advanced/smart_ptrs.html)
 		Templates (https://stackoverflow.com/questions/6725868/generics-templates-in-python)
+
+I have coded a complete game of blackjack in Python(3). I ran into a few issues since this language's classes and object orientation vary slightly from C++. The code itself is much simpler in nature than what I was used to, so at times I wasn't sure how to make specific instructions for things Python inherently accounts for. Although I coudln't incorporate everything from class into my code, I afterwards researched the topics in python to make comparisons to what we learned for C++.
+
+I have also included "python_notes.txt" which is a file of the notes I took while learning Python(3), that helped me to code my project.
