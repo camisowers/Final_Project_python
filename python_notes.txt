@@ -1,0 +1,186 @@
+Lesson 1: "Hello World"
+* print("Hello World!") is like cout
+	- print(a,b) -> 3 4
+	- includes endline after print() command
+* use indentation instead of {} for blocks of code
+	- indent 4 spaces
+
+Lesson 2: Variables and Types
+* object orieneted, not "statically typed"
+	- don't need to declare variables or type before using
+	- every variable is an object
+* numbers (int, floating pt)
+	- myint = 7 / myfloat = 7.0
+	- casting int -> myfloat = float(7)
+	- a, b = 3, 4		(a = 4 , b = 3)
+* strings
+	- mystring = 'hello' == "hello" (either works)
+
+Lesson 3: Lists
+* create with 	mylist = [1,2,3]
+* add to with 	mylist.append(1)   list: 1 2 3 1
+* iterate   for x in mylist:
+		print(x)
+* access with mylist[index]
+	- index starts at zero
+
+Lesson 4: Basic Operators
+* artihmetic
+	- add+ / subtract- / multiply* / divide/
+	- modulo % -> returns an int remainder of the division
+	- power **
+* operators w/ strings
+	- can concatenate strings w/ +
+	- can write string multiple times with *
+		twohellos = "hello" * 2 == hellohello
+* operators w/ lists
+	- can concatenate lists
+		even_numbers = [2,4]
+		odd_numbers = [1,3]
+		all_numbers = odd_numbers + even_numbers
+			== [1, 3, 2, 4]
+	- can write list multiple times 
+		3lists = [1,2,3] * 3
+
+Lesson 5: String Formatting
+* % operator
+	- used to format a set of variables together w/ a string
+	- %s (string/ any object w/ string representation...numbers)
+	- %d (integers)
+	- %f (floating point)
+	- %.<4>f (floating point w/ 4 decimal places)
+	? %x/%X (integers in hex represenation) 
+name = "John"
+age = 23
+print("Hello %s." % name)
+	-> Hello John.
+print("%s is %d years old." % (name,age))
+	-> John is 23 years old.
+
+Lesson 6: Basic String Operators	
+* len is used to print out the length of a string
+	- includes punctuation and spaces
+	mystring = "hello world"
+	print(len(mystring))
+
+* .index("o")
+	print(mystring.index("o") -> 4
+	- first o is at index 4		
+* .count("l)
+	print(mystring.count("l")) -> 3
+	- counts the number of "l" in the string
+* print(mystring[3:7]) -> lo w
+	- prints slice of string starting at 3 and ending at 6
+	- to change step increment of output
+	print(mystring[3:7:2]) -> outputs every other char
+* can reverse string w/
+	print(mystring[::-1])
+* .upper() / lower()
+	print(mystring.upper())
+	- print the whole string in uppercase/lowercase
+* .startswith() / .endswith()
+	- output true or false 
+	print(mystring.startswith("hello")) -> true
+* .split()
+	- splits string into a bunch of strings grouped in a list
+	words = mystring.split(" ") -> words == ["hello", "world"]
+	- splits where there is a space
+
+Lesson 7: Conditions
+* uses boolean values
+	print(x==2)  <- returns true or false
+* ==, !=, <, >
+* and / or for complex expressions
+	if name=="John" and age==23:
+		print(...)
+* in - checks if a object exists w/in a container
+	if name in ["John", "Rick"]
+		print(...)
+* if, elif, else 
+	- use indentation for commands under each
+* is - considers actual variables rather than variable values
+* not - inverts a boolean express
+	print(not False) 	//prints true
+
+Lesson 8: Loops
+* for - iterate over a given sequence
+	- range: returns a new list w/ numbers of that range
+		* zero based
+		for x in range(5):
+			print(x) 	//prints 0,1,2,3,4
+		for x in range(3,6):
+			print(x)	//prints 3,4,5
+	- xrange: returns an iterator (more efficient)
+* while - repeat as long as boolean condition is met
+* break: used to exit a loop
+* continue: used to skip the current block
+* else - can use else after a loop condition 
+	- break ignores else
+	- continue still executes else
+	while (count<5):
+		print(count)
+		count +=1
+	else:
+		print("count value reached %d" %(count))
+
+Lesson 9: Functions
+* functions defined using "def" followed by the function name
+	def my_function():
+		print("Hello function")
+* can recieve arguments
+	def my_func_with_args(username, greeting)
+		print("Hello %s. I wish you %s" %(username, greeting))
+* return a value
+	def sum(a,b)
+		return a+b
+	x = sum(1,2) 	//stores 3
+
+Lesson 10: Classes and Objects
+	class MyClass:
+    
+		variable = "blah"
+
+    
+		def function(self):
+        
+			print("This is a message inside the class.")
+
+
+	myobjectx = MyClass()
+
+
+	print(myobjectx.variable)	//prints "blah"
+	myobjectx.function()		//prints "This is a message inside the class."
+	myobject.variable = "change variable"
+
+Lesson 11: Dictionaries 
+* data type (similar to list) using keys to access values
+	phonebook = {}
+	phonebook["John"] = 938477566
+	print(phonebook)
+OR	
+	phonebook = {
+		"John" : 938477566
+		"Jack" : 938377264
+		"Jill" : 947662781
+	}
+* iterating over dictionaries
+	- doesn't keep order of values
+	phonebook = {"John" : 938477566, "Jack" : 938377264, "Jill" : 947662781}
+	for name, number in phonebook.items():
+		print("Phone number of %s is %d" %(name, number))
+* removing a value
+	del phonebook["John"]
+	OR
+	phonebook.pop("John")
+	
+Lesson 12: Modules and Packages
+* modlule - piece of software with specific functionality
+	- different files w/ .py 
+	- to import other modules use import command
+		import draw		//draw.py
+		result = play_game()
+		draw.draw_game(result)
+		OR
+		from draw import *	//importsa all objects from draw
+		draw_game(result) 	//not need draw.
