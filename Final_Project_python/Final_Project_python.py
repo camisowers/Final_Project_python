@@ -5,7 +5,7 @@
 import random          #random library
 
 
-''' The class card randomly generats cards 2-10, Jack, Queen, King, Ace with
+''' The class card randomly generates cards 2-10, Jack, Queen, King, Ace with
 suits spades, clubs, hearts, and diamonds.
 '''
 class card:

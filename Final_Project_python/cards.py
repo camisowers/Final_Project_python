@@ -6,7 +6,7 @@ class card:
         
     #prints out rank and suit of card
     def print_card(self):                   
-        print("%d of %s", (rank,suit)
+        print("%d of %s", (rank,suit))
 
     #overload < operator
  #   def __lt__(self,other):               
